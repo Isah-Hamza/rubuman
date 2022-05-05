@@ -183,6 +183,7 @@ main .hero{
     font-size: 16px;
     background-color: var(--orange-color);
     color: #eee;
+    white-space: nowrap;
 }
 section.roadmap{
     margin-top: 50px;
