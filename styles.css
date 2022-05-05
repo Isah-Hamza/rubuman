@@ -186,7 +186,7 @@ main .hero{
     white-space: nowrap;
 }
 section.roadmap{
-    margin-top: 50px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 section.roadmap h2{
@@ -418,7 +418,7 @@ footer p:first-child{
         width: 100%;
         left: 0;
         top: 0;
-        background-color:rgba(0, 0, 0, .3);
+        background-color:rgba(0, 0, 0, .5);
     }
     nav.open ul{
         flex-direction: column;
@@ -457,12 +457,18 @@ footer p:first-child{
        flex-direction: column;
    }
    .tokenomics > div > div:first-child{ width: 100%; }
+   .about-rubuman > div:first-child{  display: flex; flex-direction: column; align-items: center; }
+   .about-rubuman > div p,
+   .about-rubuman > div button{ 
+       align-self: center; 
+    }
    .about-rubuman > div:last-child{ display: none; }
    .roadmap-container { margin: unset; margin-left: 50px; }
    .roadmap-container > div:nth-child(odd){ 
        transform: unset !important; 
-       margin-left: 50px; 
+       margin-left: 40px; 
     }
+    .roadmap-container > div:nth-child(even){ margin-left: 40px; }
 }
 
 @media screen and (max-width:620px) {
@@ -474,7 +480,7 @@ footer p:first-child{
         flex-direction: column;
     }
     .roadmap-container{
-        margin-left: 10px;
+        margin-left: 20px;
         font-size: 13px;
         padding: 20px 0;
     }
@@ -495,8 +501,8 @@ footer p:first-child{
     .section-two,
     .tokenomics,
     .about{
-        padding-right: 20px;
-        padding-left: 20px;
+        padding-right: 15px;
+        padding-left: 15px;
     }
     
 }
