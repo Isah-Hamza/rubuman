@@ -487,7 +487,7 @@ footer p:first-child{
     .roadmap-container h4{ font-size: 16px; }
     .team{ margin-top: 0; }
     .team > p { max-width: 90%; }
-    h2{ font-size: 1.5em !important; }
+    h2{ font-size: 1.5em !important; color: coral; }
     .section-two .left p{ font-size: 13px; }
     .tokenomics > div { gap: 20px; }
 }
