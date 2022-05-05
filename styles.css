@@ -203,7 +203,6 @@ section.roadmap h2{
 }
 .roadmap-container > div {
     width: 450px;
-    width: max-content;
     margin-bottom: 35px;
     display: flex;
     gap: 20px;
@@ -467,6 +466,7 @@ footer p:first-child{
 }
 
 @media screen and (max-width:620px) {
+    .roadmap-container > div{ width: 80vw; }
     main .hero br{
         display: none;
     }
