@@ -4,7 +4,8 @@
   const nav = document.querySelector('.navigation');
   const closeBtn = document.querySelector('.close');
   const anchors = Array.from(document.querySelectorAll('header a'));
-  
+  const heroBtns = [...document.querySelectorAll('.hero button')];
+  const coinExporterSection = document.querySelector('.coinexporter');
 
   function handleOpenMenu(){
     nav.classList.toggle('open');
@@ -13,6 +14,7 @@
   menuBtn.addEventListener('click', handleOpenMenu);
   closeBtn.addEventListener('click', handleOpenMenu);
   anchors.forEach(elem => elem.addEventListener('click', handleOpenMenu));
+  heroBtns.forEach(btn => btn.addEventListener('click', () => { coinExporterSection.scrollIntoView() }));
 
 //   // Wrap every letter in a span
 // // var textWrapper = document.querySelector('.description');

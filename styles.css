@@ -5,7 +5,7 @@
 }
 html{
     scroll-behavior: smooth;
-    scroll-padding-top: var(--header-height);
+    scroll-padding-top: calc( var(--header-height) - 30px );
     color: #eee;
 }
 
@@ -269,7 +269,7 @@ section.roadmap h2{
 }
 
 .team {
-    margin-top: 50px;
+    padding-top: 50px;
 }
 .team h2,
 .team > p{
@@ -326,6 +326,63 @@ section.roadmap h2{
     margin: 10px auto 0;
 }
 
+.investor {
+    padding: 50px;
+}
+.investor > h2{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.investor > div{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+
+}
+.investor .right > div{
+    display: flex;
+    gap: 10px;
+}
+.investor img{
+    width: 90%;
+    aspect-ratio: 12/7;
+}
+.investor span{
+    margin-top: 5px;
+    color: coral;
+    font-weight: bold;
+}
+
+.coinexporter{
+    padding: 50px 15px ;
+    text-align: center;
+}
+.coinexporter > div{
+    display: flex;
+    flex-direction: column;
+}
+.coinexporter button { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--orange-color);
+    margin: 0 auto;
+    color: white;
+    margin-top: 20px;
+}
+.coinexporter h2{
+    margin-bottom: 20px;
+}
+.coinexporter p { line-height: 23px; margin-bottom: 5px; }
+.coinexporter i{ font-size: 30px; }
+
 .about{
     padding: 50px;
 }
@@ -334,16 +391,18 @@ section.roadmap h2{
 }
 .about-rubuman{
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-around;
     align-items: center;
     grid-template-columns: 1fr 1fr;
 }
 .about-rubuman > div{
     flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
 }
 .about-rubuman img{
     width: 90%;
+    margin-left: auto;
 }
 .about-rubuman button{
     padding: 14px 45px ;
@@ -354,19 +413,47 @@ section.roadmap h2{
     font-size: 16px;
     background-color: var(--orange-color);
     color: #eee;
-    margin: 20px 0 0 ;
+    margin: 20px auto 0 0 ;
+}
+
+.newsletter h2{ font-size: 25px; }
+
+.newsletter input{ 
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 10px ;
+    width: 200px;
+
+ }
+
+.newsletter button{
+    padding: 10px 35px;
+    /* height: 50px; */
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: var(--blue-color) ;
+    color: #eee;
+    margin: 0 auto 10px ;
 }
 
 footer{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     justify-content: center;
     align-items: center;
-    /* height: 60px; */
-    border-top: 1px solid gainsboro;
+    background-color: var(--orange-color);
+    /* border-top: 1px solid gainsboro; */
     padding: 10px;
     margin-top: 30px;
+    text-align: center;
 }
+
+/* footer > * { flex-basis: 500px; display: flex; flex-direction: column; justify-content: center;  } */
 footer p{
     margin-bottom: 0;
 }
@@ -374,13 +461,14 @@ footer .socials{
     display: flex;
     gap: 20px;
     align-items: center;
-    margin: 10px;
+    margin: 10px 0;
+    /* color: coral; */
 }
 footer .socials i{
     cursor: pointer;
 }
 footer .socials i:hover{
-    color: coral;
+    color: var(--blue-color);
 }
 footer p:first-child{
     color: coral;
@@ -460,11 +548,16 @@ footer p:first-child{
        flex-direction: column;
    }
    .tokenomics > div > div:first-child{ width: 100%; }
+   .investor{ padding: 50px 15px 0; }
+   .investor img{ width: 100%; }
+   .investor > h2 { margin-bottom: 20px; }
+   .investor > div { grid-template-columns: 1fr; gap: 30px; }
+   .coinexporter { padding: 50px 15px 0 ; }
    .about-rubuman > div:first-child{  display: flex; flex-direction: column; align-items: center; }
    .about-rubuman > div p,
    .about-rubuman > div button{ 
-       align-self: center; 
-    }
+    margin: 20px auto 0 ;
+}
    .about-rubuman > div:last-child{ display: none; }
    .roadmap-container { margin: unset; margin-left: 50px; }
    .roadmap-container > div:nth-child(odd){ 
@@ -475,10 +568,10 @@ footer p:first-child{
 }
 
 @media screen and (max-width:620px) {
+    body p{ font-size: 13px; }
     .roadmap-container > div{ width: 80vw; }
-    main .hero br{
-        display: none;
-    }
+    main .hero br{display: none; }
+    main .hero p{ font-size: 18px; }
     .hero .controls{
         flex-direction: column;
     }
@@ -487,10 +580,11 @@ footer p:first-child{
         font-size: 13px;
         padding: 20px 0;
     }
+    .table-container div p { font-size: 14px; }
     .roadmap-container h4{ font-size: 16px; }
     .team{ margin-top: 0; }
     .team > p { max-width: 90%; }
-    h2{ font-size: 1.5em !important; color: coral; }
+    h2{ font-size: 1.5em !important; color: coral; margin-top: 0 !important;}
     .section-two .left p{ font-size: 13px; }
     .tokenomics > div { gap: 20px; }
 }
