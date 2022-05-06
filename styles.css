@@ -26,7 +26,7 @@ nav .close{
     display: none;
 }
 .color{
-    font-weight: 600;
+    font-weight: 700 !important;
     color: var(--orange-color);
     color: coral;
 }
@@ -139,7 +139,7 @@ main .hero{
 }
 .hero button div{
     color: black !important;
-    background: white;
+    background: #eee;
     display: flex;
     align-items: center;
     gap: 15px;
