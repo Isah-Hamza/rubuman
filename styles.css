@@ -377,7 +377,7 @@ section.roadmap h2{
 .coinexporter h2{
     margin-bottom: 20px;
 }
-.coinexporter p { line-height: 23px; margin-bottom: 5px; }
+.coinexporter p, .team > p { line-height: 23px; margin-bottom: 5px; }
 .coinexporter i{ font-size: 30px; }
 
 .about{
