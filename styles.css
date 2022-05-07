@@ -81,6 +81,13 @@ header ul li a.active{
     transition: all .3s ease-in-out;
 }
 
+header .logo {
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+
+}
+header .logo img{ width: 35px; object-fit: contain; margin-right: 10px; }
 main{
     margin-top: var(--header-height);
     display: flex;
