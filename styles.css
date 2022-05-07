@@ -383,7 +383,7 @@ section.roadmap h2{
 .about{
     padding: 50px;
 }
-.about h2, .about p{
+ .about p{
     margin-bottom: 15px;
 }
 .about-rubuman{
@@ -557,7 +557,7 @@ footer p:first-child{
    .about-rubuman > div:first-child{  display: flex; flex-direction: column; align-items: center; }
    .about-rubuman > div p,
    .about-rubuman > div button{ 
-    margin: 20px auto 0 ;
+    margin: 30px auto 0 ;
 }
    .about-rubuman > div:last-child{ display: none; }
    .roadmap-container { margin: unset; margin-left: 50px; }
@@ -587,6 +587,7 @@ footer p:first-child{
     .team > p { max-width: 90%; }
     h2{ font-size: 1.5em !important; color: coral; margin-top: 0 !important;}
     .section-two .left p{ font-size: 13px; }
+    .about h2{ margin-bottom: 0; }
     .tokenomics > div { gap: 20px; }
 }
 
