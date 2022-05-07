@@ -32,12 +32,15 @@ nav .close{
 }
 ul{
     list-style: url('./assets/images/mark.svg');
+
     /* overflow-x: hidden; */
     /* width: 100%; */
 }
+
 ul li::marker{
     /* font-size: 1em; */
 }
+
 a{
     color: inherit;
     text-decoration: none;
