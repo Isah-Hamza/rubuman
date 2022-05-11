@@ -32,9 +32,6 @@ nav .close{
 }
 ul{
     list-style: url('./assets/images/mark.svg');
-
-    /* overflow-x: hidden; */
-    /* width: 100%; */
 }
 
 ul li::marker{
@@ -90,7 +87,7 @@ header .logo {
     /* gap: 10px; */
 
 }
-header .logo img{ width: 35px; object-fit: contain; margin-right: 10px; }
+header .logo img{ width: 60px; object-fit: contain; }
 main{
     margin-top: var(--header-height);
     display: flex;
@@ -100,7 +97,8 @@ main{
     overflow-x: hidden;
 }
 main .hero{
-    background: url('./assets/images/crypt-1.jpg') ;
+    background: url('./assets/images/crypto 1.jpg') ;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: calc(100vh - var(--header-height));
@@ -476,6 +474,7 @@ footer .socials{
 }
 footer .socials i{
     cursor: pointer;
+    font-size: 20px;
 }
 footer .socials i:hover{
     color: var(--blue-color);
@@ -579,6 +578,9 @@ footer p:first-child{
 }
 
 @media screen and (max-width:620px) {
+    main .hero{
+        background: url('./assets/images/crypto 1 mobile.png') ;
+    }
     body p{ font-size: 13px; }
     .roadmap-container > div{ width: 80vw; }
     main .hero br{display: none; }
