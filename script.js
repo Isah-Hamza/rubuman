@@ -28,7 +28,7 @@
     rubumanTitle.append(rubuman[i]);
     i++
     if( i >= rubuman.length ) clearInterval(rubumanTitleInterval);
-  }, 100 );
+  }, 100 );git 
 
 
   let j = 0
