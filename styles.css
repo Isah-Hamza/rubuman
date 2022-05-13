@@ -3,6 +3,7 @@
     --orange-color: #bc27c5;
     --blue-color: #0bc5ea;
 }
+.hide{ display: none; }
 html{
     scroll-behavior: smooth;
     scroll-padding-top: calc( var(--header-height) - 30px );
@@ -97,7 +98,7 @@ main{
     overflow-x: hidden;
 }
 main .hero{
-    background: url('./assets/images/crypto 1.jpg') ;
+    background-image: url('./assets/images/crypto 1.jpg') ;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -113,6 +114,10 @@ main .hero{
     font-size: 25px;
     text-align: center;
     margin-bottom: 30px;
+}
+
+.hero .description span{
+    white-space: pre;
 }
 
 .hero .controls{
@@ -579,7 +584,7 @@ footer p:first-child{
 
 @media screen and (max-width:620px) {
     main .hero{
-        background: url('./assets/images/crypto 1 mobile.png') ;
+        background-image: url('./assets/images/crypto 1 mobile.png') ;
     }
     body p{ font-size: 13px; }
     .roadmap-container > div{ width: 80vw; }

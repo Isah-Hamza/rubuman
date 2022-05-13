@@ -6,33 +6,46 @@
   const anchors = Array.from(document.querySelectorAll('header a'));
   const heroBtns = [...document.querySelectorAll('.hero button')];
   const coinExporterSection = document.querySelector('.coinexporter');
+  const whitelist = document.querySelector('.whitelist');
+  const rubumanTitle = document.querySelector('.rubuman-title');
+  const rubumanBody = document.querySelector('.rubuman-body .body');
+  const typingIndicator = document.querySelector('.indicator');
+
+
+  const rubuman = 'RUBUMAN';
+  const heroText = `Welcome to the future that creates  mass 
+  wealth and prosperity for all.`;
+
+
+  console.log(whitelist);
 
   function handleOpenMenu(){
     nav.classList.toggle('open');
   }
 
+  let i = 0;
+  const rubumanTitleInterval = setInterval(() => {
+    rubumanTitle.append(rubuman[i]);
+    i++
+    if( i >= rubuman.length ) clearInterval(rubumanTitleInterval);
+  }, 100 );
+
+
+  let j = 0
+  setTimeout(() => {
+   const rubumanBodyInterval =  setInterval(() => {
+    rubumanBody.append(heroText[j]);
+    j++
+    if( j >= heroText.length ) {
+      clearInterval(rubumanBodyInterval);
+      typingIndicator.classList.add('hide');
+    };
+    }, 100 );
+  }, 1000 );
+
   menuBtn.addEventListener('click', handleOpenMenu);
   closeBtn.addEventListener('click', handleOpenMenu);
   anchors.forEach(elem => elem.addEventListener('click', handleOpenMenu));
   heroBtns.forEach(btn => btn.addEventListener('click', () => { coinExporterSection.scrollIntoView() }));
+  whitelist.addEventListener('click', () => {  window.open('./assets/pdf/Official Whitepaper.pdf', '_blank', 'fullscreen=yes' ); return false })
 
-//   // Wrap every letter in a span
-// // var textWrapper = document.querySelector('.description');
-// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-// anime.timeline({loop: true})
-//   .add({
-//     targets: '.ml2 .letter',
-//     scale: [4,1],
-//     opacity: [0,1],
-//     translateZ: 0,
-//     easing: "easeOutExpo",
-//     duration: 950,
-//     delay: (el, i) => 70*i
-//   }).add({
-//     targets: '.ml2',
-//     opacity: 0,
-//     duration: 1000,
-//     easing: "easeOutExpo",
-//     delay: 1000
-//   });
